@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Bean House Coffee</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#484742",
+                        "inverse-surface": "#362f2a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#e3beb8",
+                        "on-surface-variant": "#504442",
+                        "surface-bright": "#fff8f5",
+                        "surface-container-low": "#fef1e9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#201a16",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary": "#0e1c03",
+                        "surface-variant": "#ede0d8",
+                        "on-primary-container": "#ae8d87",
+                        "on-tertiary-container": "#889a75",
+                        "primary": "#271310",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#111f05",
+                        "tertiary-container": "#223115",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#fff8f5",
+                        "secondary": "#605e59",
+                        "on-secondary-container": "#66645f",
+                        "outline-variant": "#d3c3c0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f5",
+                        "surface-container": "#f8ebe4",
+                        "secondary-fixed": "#e6e2db",
+                        "on-tertiary-fixed-variant": "#3b4c2c",
+                        "surface-dim": "#e4d8d0",
+                        "secondary-container": "#e6e2db",
+                        "surface-tint": "#745853",
+                        "outline": "#827472",
+                        "tertiary-fixed-dim": "#b9cda4",
+                        "surface-container-highest": "#ede0d8",
+                        "secondary-fixed-dim": "#cac6bf",
+                        "on-surface": "#201a16",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#fbeee6",
+                        "on-primary-fixed": "#2b1613",
+                        "on-secondary-fixed": "#1d1c18",
+                        "tertiary-fixed": "#d5e9bf",
+                        "primary-container": "#3e2723",
+                        "surface-container-high": "#f3e6de",
+                        "on-primary-fixed-variant": "#5b403c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "80px",
+                        "container-max-width": "1200px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["EB Garamond"],
+                        "headline-xl-mobile": ["EB Garamond"],
+                        "headline-md": ["EB Garamond"],
+                        "headline-xl": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shadow-ambient {
+            box-shadow: 0 4px 20px rgba(39, 19, 16, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 bg-transparent flat no shadows">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                Bean House Coffee
+            </div>
+<nav class="hidden md:flex gap-gutter">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-headline-sm text-headline-sm ease-in-out duration-500 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#our-story">Our Story</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-headline-sm text-headline-sm ease-in-out duration-500 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#menu">Menu</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-headline-sm text-headline-sm ease-in-out duration-500 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#hours">Hours</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-headline-sm text-headline-sm ease-in-out duration-500 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#reviews">Reviews</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-DEFAULT hover:bg-primary/90 transition-colors hidden md:block uppercase min-h-[48px]">
+                Order Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center py-section-gap px-margin-mobile md:px-margin-desktop" id="our-story">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover" data-alt="A beautifully crafted latte with intricate fern leaf foam art sitting on a rustic wooden table in a sunlit cafe. The scene captures the 'slow pour' aesthetic with warm, natural lighting highlighting the earthy browns of the coffee and wood, accented by soft creamy whites. The mood is tranquil, inviting, and sophisticated, perfectly reflecting a high-end artisanal roastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtXKDgaN_0Mn96y75L8e_ihuc2JsT8R3Nih-axKg9UkAHHpyQf_N8K2C6ydI765slLGRZqmPIDYCGWBbWVW5lz3T3LVgxzZuv7IZplyrqO-z2M7fb0XBJqV5zHIDG23oixkLZ6zm6JqfricjukYkSlynlM9b6GThK_BiEIL9x8ov4LWXI5EJiM4GEwTOonrka7mEW7yoz0Mf63JtbzasHbTTZkFpErM2cHbV_9trFleJ2-i2Hq2tOkVYstWaMTI7g7Gpv2yPsOyS8">
+<div class="absolute inset-0 bg-inverse-surface/40"></div>
+</div>
+<div class="relative z-10 max-w-container-max-width mx-auto text-center text-on-primary">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6">Yavaş Döküm Sanatı</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-8 text-surface-container-high">
+                    Her bir fincan, özenle seçilmiş çekirdekler ve ustalıkla demlenmiş bir hikaye barındırır. Bean House Coffee'de aceleye yer yok; sadece kaliteli kahvenin tadını çıkarın.
+                </p>
+<div class="flex justify-center gap-4">
+<button class="bg-surface text-primary font-label-md text-label-md px-8 py-4 rounded-DEFAULT hover:bg-surface-container transition-colors uppercase tracking-wider min-h-[48px]">
+                        Menüyü Keşfet
+                    </button>
+</div>
+</div>
+</section>
+<!-- Popular Coffees Section (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto" id="menu">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Öne Çıkan Lezzetler</h2>
+<div class="w-12 h-1 bg-outline-variant mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl overflow-hidden shadow-ambient relative group">
+<div class="h-[400px] w-full overflow-hidden">
+<img alt="Espresso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A close-up shot of a rich, dark espresso being poured into a small, elegant ceramic cup. The crema is thick and golden-brown, contrasting beautifully with the dark liquid. The lighting is moody and focused, highlighting the texture of the liquid and the smooth glaze of the cup against a dark, earthy background. The image exudes warmth and craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwMYI4zs92QW-FVi_PtQUr68Pfc0cuJaa8x-7CQLrWmUl4k4Dc_DXjbj_nmeeRARit2dIrY1KOsDt0Qei3dlEzIi5MjzSvs_sO4UBxkNC7KzKNJyvL_xIa98cVO9ePQ-pNdluJ6JTA1l6Uvc9s4kGq984iOdQJMnd02U5_wNk4xEEXPL7j0EjC44_S2rnIUtDNZaEjXFmkydwtiSWH67Q1-eI8ATmmF1ceLkmqgnKNY56noXOVtP-6HtyxiwjoKg0Sdtol169z3qU">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md px-3 py-1 rounded-full mb-3 w-max uppercase">Özel Harman</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-2">Signature Espresso</h3>
+<p class="font-body-md text-body-md text-surface-container-low mb-4">Yoğun gövdeli, karamel ve bitter çikolata notaları barındıran imza espresso harmanımız.</p>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest">85 TL</p>
+</div>
+</div>
+<!-- Side Cards -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-surface-container-lowest rounded-xl overflow-hidden shadow-ambient p-6 flex flex-col justify-between">
+<div>
+<span class="inline-block bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md px-3 py-1 rounded-full mb-4 uppercase">Soğuk Demleme</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Cold Brew</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">18 saatlik yavaş demleme süreciyle elde edilen, asiditesi düşük, yumuşak içimli soğuk kahve.</p>
+</div>
+<div class="mt-4 flex justify-between items-center border-t border-surface-variant pt-4">
+<p class="font-headline-sm text-headline-sm text-primary">110 TL</p>
+<button class="text-primary hover:text-surface-tint transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-highest rounded-xl overflow-hidden p-6 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="local_cafe">local_cafe</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">V60 Pour Over</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Etiyopya Yirgacheffe çekirdekleriyle, çiçeksi ve meyvemsi notaların ön planda olduğu filtre kahve deneyimi.</p>
+</div>
+<div class="mt-4 relative z-10">
+<p class="font-headline-sm text-headline-sm text-primary">95 TL</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hours & Location -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container" id="hours">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Ziyaret Saatleri</h2>
+<ul class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
+<li class="flex justify-between border-b border-surface-variant pb-2">
+<span class="">Pazartesi - Cuma</span>
+<span class="font-medium text-primary">07:00 - 22:00</span>
+</li>
+<li class="flex justify-between border-b border-surface-variant pb-2">
+<span class="">Cumartesi</span>
+<span class="font-medium text-primary">08:00 - 23:00</span>
+</li>
+<li class="flex justify-between pb-2">
+<span class="">Pazar</span>
+<span class="font-medium text-primary">09:00 - 21:00</span>
+</li>
+</ul>
+<div class="mt-12">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Adres</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Moda Caddesi No: 42<br>
+                            Kadıköy, İstanbul
+                        </p>
+</div>
+</div>
+<div class="w-full md:w-1/2 h-[400px] bg-surface-container-highest rounded-xl overflow-hidden relative">
+<img alt="Map Location" class="w-full h-full object-cover opacity-80" data-alt="A stylized, minimal map view of the Kadikoy, Istanbul neighborhood. The map uses a sophisticated color palette of creams, soft sages, and earthy taupes, aligning with the brand's aesthetic. Small, elegant line-art icons indicate streets and points of interest, with a distinct, warm terracotta marker pinpointing the cafe's location. The overall look is clean, modern, and highly curated." data-location="Istanbul" src="https://www.donanimhaber.com/cache-v2/?t=20260121131651&amp;width=-1&amp;text=0&amp;path=https://www.donanimhaber.com/images/images/haber/156504/telefondan-konum-nasil-atilir156504_4.jpg">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-surface/90 backdrop-blur px-6 py-3 rounded-full shadow-ambient flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md text-primary uppercase">Buradayız</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto" id="reviews">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Kahve Severlerin Yorumları</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-ambient border border-surface-variant">
+<div class="flex gap-1 text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Moda'nın en iyi V60 demlemesini burada içtim. Atmosfer sakin, müzikler harika. Tam bir pazar sabahı mekanı."</p>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider">- Zeynep A.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-ambient border border-surface-variant">
+<div class="flex gap-1 text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Baristalar kahve konusunda çok bilgili ve ilgili. Yeni tatlar denemek isteyenler için kesinlikle tavsiye ederim."</p>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider">- Can K.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-ambient border border-surface-variant">
+<div class="flex gap-1 text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star_half</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Cold brew yaz aylarının vazgeçilmezi oldu benim için. Şişeleme tasarımları da çok şık."</p>
+<p class="font-label-md text-label-md text-primary uppercase tracking-wider">- Elif B.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-high dark:bg-inverse-surface w-full py-section-gap flat no shadows">
+<div class="flex flex-col items-center gap-8 px-margin-desktop text-center max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim">
+                Bean House Coffee
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-body-sm text-body-sm ease-in-out duration-300 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-body-sm text-body-sm ease-in-out duration-300 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-body-sm text-body-sm ease-in-out duration-300 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<a class="text-outline hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="text-outline hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+<div class="text-primary dark:text-primary-fixed-dim font-body-sm text-body-sm mt-4">
+                © 2024 Bean House Coffee. Crafted for the slow pour.
+            </div>
+</div>
+</footer>
+
+
+</body></html>

@@ -1,1 +1,1 @@
-test
+GDG ANTALYA 9 MAYIS 2026 ETKİNLİĞİ 
